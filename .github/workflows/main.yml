@@ -26,6 +26,7 @@ jobs:
           docker build -t spring-cicd . 
           docker tag spring-cicd seonhoshin/spring-cicd:${GITHUB_SHA::7}
           docker push seonhoshin/spring-cicd:${GITHUB_SHA::7}
+
 - name: Configure AWS credentials
   uses: aws-actions/configure-aws-credentials@v1
   with:
